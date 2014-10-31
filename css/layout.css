@@ -561,7 +561,11 @@ figure.figure-hover { position:relative; }
 			top:0;
 			right:-10px;
 		}
-	
+	#error {
+		text-align: center;
+		font-size: 18px;
+		color: rgb(218, 0, 0);
+	}
 	
 	
 /* ========================= Testimonials & Tweets ========================= */
