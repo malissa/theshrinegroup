@@ -64,6 +64,7 @@
     <!-- <img src="images/logo.png" alt="TSG" /> -->
     <h1>Thanks for the message!</h1>
     <h3>We'll get back to you right away.</h3>
+    <a href="/" ><h4 style="padding-top:40px;text-decoration:underline">go home</h4></a>
    </div> <!-- End container -->
 
   </div> <!-- End header-overlay -->

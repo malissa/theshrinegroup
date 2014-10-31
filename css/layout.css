@@ -454,28 +454,28 @@ figure.figure-hover { position:relative; }
 		*/
 /* ========================= Services ========================= */
 
-	#services .item {
+	#what .item {
 		padding: 0 15px 30px;
 		text-align:center;
 	}
-		#services .item i {
+		#what .item i {
 			color:#2baaea;
 			font-size:72px;
 		}
-		#services .item i.fa-star-o{
+		#what .item i.fa-star-o{
 			color:#f66e44;
 		}
-		#services .item i.fa-desktop{
+		#what .item i.fa-desktop{
 			color:#4cbb1b
 		}
-		#services .item i.fa-users{
+		#what .item i.fa-users{
 			color:#df9e20;
 		}
-		#services .item h4 {
+		#what .item h4 {
 			font-size:20px;
 			line-height:26px;
 		}
-		#services .item h5 {
+		#what .item h5 {
 			font-size:13px;
 			line-height:18px;
 			color:#b0b0b0;
@@ -500,7 +500,7 @@ figure.figure-hover { position:relative; }
 			border-radius:0px;
 		}
 	#portofolio .item { padding-bottom:30px; }
-#what li i { color: #2baaea;}
+#who li i { color: #2baaea;}
 	
 	
 	
@@ -540,24 +540,24 @@ figure.figure-hover { position:relative; }
 
 /* ========================= Contact ========================= */
 
-	#contact form { margin:0px; }
-	#contact input[type="text"], #contact textarea {
+	#start form { margin:0px; }
+	#start input[type="text"], #start textarea {
 		margin-bottom:20px;
 		width:100%;
 	}
-	#contact textarea { height:100px; }
-	#contact .btn {
+	#start textarea { height:100px; }
+	#start .btn {
 		display:block;
 		width:100%;
 	}
-	#contact .alert {
+	#start .alert {
 		margin:20px 0px 0px;
 		padding:15px 25px;
 		-moz-border-radius:0px;
 		-webkit-border-radius:0px;
 		border-radius:0px;
 	}
-		#contact .alert .close {
+		#start .alert .close {
 			top:0;
 			right:-10px;
 		}
@@ -582,7 +582,7 @@ figure.figure-hover { position:relative; }
 }
 	.testimonials .container, .tweets .container {
 		position:relative;
-		padding-left:125px;
+		/*padding-left:125px;*/
 	}
 	.testimonials .testimonials-icon, .tweets .tweets-icon {
 		/*font-size:90px;*/
@@ -790,10 +790,10 @@ figure.figure-hover { position:relative; }
 
 .ie7 #header .container h1 { margin-bottom:10px; }
 
-.ie7 #contact form { margin-left:-20px; }
-.ie7 #contact input[type="text"], .ie7 #contact textarea { width:93%; }
-.ie7 #contact textarea { height:70px; }
-.ie7 #contact .alert .close { top:-5px; }
+.ie7 #start form { margin-left:-20px; }
+.ie7 #start input[type="text"], .ie7 #start textarea { width:93%; }
+.ie7 #start textarea { height:70px; }
+.ie7 #start .alert .close { top:-5px; }
 
 .ie7 #blog #comments .comment-form textarea { width:96%; }
 	
@@ -831,6 +831,9 @@ figure.figure-hover { position:relative; }
 		font-size:42px;
 		line-height:48px;
 	}
+
+	/*.testimonials .container { padding-left: 30px; }*/
+	.testimonials .media-body p { font-size: 26px; line-height: 28px; }
 	
 	/*#navigation {
 		padding-left:10px;
@@ -839,23 +842,23 @@ figure.figure-hover { position:relative; }
 	#navigation .logo { padding-left:0px; }*/
 	/*#navigation .nav-menu ul { display:none; }*/
 	/*
-	#services, #portofolio, #about, #contact {
+	#what, #portofolio, #about, #start {
 		padding-left:20px;
 		padding-right:20px;
 	}
-	#services .item { text-align:center; }
-	#services .item img {
+	#what .item { text-align:center; }
+	#what .item img {
 		float:none;
 		width:64px;
 		height:64px;
 	}
-	#services .item .content {
+	#what .item .content {
 		float:none;
 		width:100%;
 		margin-top:25px;
 	}
 	
-	#contact textarea { margin-top:20px; }
+	#start textarea { margin-top:20px; }
 	
 	#blog {
 		padding-left:20px;
@@ -926,6 +929,9 @@ figure.figure-hover { position:relative; }
 		font-size:30px;
 		line-height:36px;
 	}
+
+	/*.testimonials .container { padding-left: 15px; }*/
+	.testimonials .media-body p { font-size: 20px; line-height: 22px; }
 	
 /*	#navigation {
 		padding-left:20px;
