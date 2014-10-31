@@ -213,51 +213,62 @@ jQuery(document).ready(function($){
 	};
 	/* End twitter integration */
 	
-	
-	/* Contact us process */
 	$("#contact-form").submit(function() {
-		var submitData	= $(this).serialize();
-		var $name		= $(this).find("input[name='name']");
-		var $email		= $(this).find("input[name='email']");
-		var $subject	= $(this).find("input[name='subject']");
-		var $message	= $(this).find("textarea[name='message']");
-		var $datastatus	= $(this).next('.data-status');
-		var $submit		= $(this).find("input[name='submit']");
-		
-		$name.attr('disabled','disabled');
-		$email.attr('disabled','disabled');
-		$subject.attr('disabled','disabled');
-		$message.attr('disabled','disabled');
-		$datastatus.show().html('<div class="alert alert-info"><strong>Loading...</strong></div>');
-		
-		$.ajax({ // Send an offer process with AJAX
-			type: "POST",
-			url: "contact.php",
-			data: submitData + "&action=add",
-			dataType: "html",
-			success: function(msg){
-				if(parseInt(msg, 0) !== 0) {
-					var msg_split = msg.split("|");
-					if(msg_split[0] === "success") {
-						$name.val('').removeAttr('disabled');
-						$email.val('').removeAttr('disabled');
-						$subject.val('').removeAttr('disabled');
-						$message.val('').removeAttr('disabled');
-						$submit.removeAttr('disabled');
-						$datastatus.html(msg_split[1]).fadeIn();
-					} else {
-						$name.removeAttr('disabled');
-						$email.removeAttr('disabled');
-						$subject.removeAttr('disabled');
-						$message.removeAttr('disabled');
-						$submit.removeAttr('disabled');
-						$datastatus.html(msg_split[1]).fadeIn();
-					}
-				}
-			}
-		});
-		return false;
+		var $name		= $("#contact-form input[name='name']");
+		var $email		= $("#contact-form input[name='email']");
+		var $website	= $("#contact-form input[name='website']");
+		var $message	= $("#contact-form textarea[name='message']");
+		if($name.val() == "" || $email.val() == "" || $website.val() == "" || $message.val() == "" ){
+			$("#error").html('All fields are required');
+			return false;
+		}
+		return true;
 	});
+
+	/* Contact us process */
+	// $("#contact-form").submit(function() {
+	// 	var submitData	= $(this).serialize();
+	// 	var $name		= $(this).find("input[name='name']");
+	// 	var $email		= $(this).find("input[name='email']");
+	// 	var $website	= $(this).find("input[name='website']");
+	// 	var $message	= $(this).find("textarea[name='message']");
+	// 	var $datastatus	= $(this).next('.data-status');
+	// 	var $submit		= $(this).find("input[name='submit']");
+		
+	// 	$name.attr('disabled','disabled');
+	// 	$email.attr('disabled','disabled');
+	// 	$subject.attr('disabled','disabled');
+	// 	$message.attr('disabled','disabled');
+	// 	$datastatus.show().html('<div class="alert alert-info"><strong>Loading...</strong></div>');
+		
+	// 	$.ajax({ // Send an offer process with AJAX
+	// 		type: "POST",
+	// 		url: "contact.php",
+	// 		data: submitData + "&action=add",
+	// 		dataType: "html",
+	// 		success: function(msg){
+	// 			if(parseInt(msg, 0) !== 0) {
+	// 				var msg_split = msg.split("|");
+	// 				if(msg_split[0] === "success") {
+	// 					$name.val('').removeAttr('disabled');
+	// 					$email.val('').removeAttr('disabled');
+	// 					$subject.val('').removeAttr('disabled');
+	// 					$message.val('').removeAttr('disabled');
+	// 					$submit.removeAttr('disabled');
+	// 					$datastatus.html(msg_split[1]).fadeIn();
+	// 				} else {
+	// 					$name.removeAttr('disabled');
+	// 					$email.removeAttr('disabled');
+	// 					$subject.removeAttr('disabled');
+	// 					$message.removeAttr('disabled');
+	// 					$submit.removeAttr('disabled');
+	// 					$datastatus.html(msg_split[1]).fadeIn();
+	// 				}
+	// 			}
+	// 		}
+	// 	});
+	// 	return false;
+	// });
 	/* End contact us process */
 	
 	
@@ -335,8 +346,23 @@ jQuery(document).ready(function($){
 			});
 		}
 	};
+
+	var getParameterByName = function(name) {
+	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	        results = regex.exec(location.search);
+	    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	};
+
+	var submitted = function(){
+		var submitted = getParameterByName('s');
+		if(submitted != ""){
+			setTimeout('alert("Thanks for the message - we\'ll get back to you!");', 1500);
+		}
+	};
 	
 	googleMap();
+	submitted();
 	/* End Google map api integration with HTML */
 
 });
