@@ -386,6 +386,7 @@ figure.figure-hover { position:relative; }
 		}
 		#what .item h2 {
 			font-size:28px;
+			padding-top: 10px;
 		}
 		#what .item h5 {
 			font-size:13px;
