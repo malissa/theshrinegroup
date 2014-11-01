@@ -1,21 +1,4 @@
 /* #Table of Contents
-
-1.  Site Styles
-2.  Header
-3.  Navigation
-4.  Services
-5.  Portofolio
-6.  Testimonials & Tweets
-7.  About
-8.  Contact
-9.  Blog
-10. Footer
-11. CSS Hacks
-12. Media Queries
-================================================== */
-
-
-
 /* ========================= Site Styles ========================= */
 
 /* Page Styles */
@@ -48,36 +31,6 @@ ul { margin:0px; }
 figure { margin:0px; }
 	figure img { width:100%; }
 
-/*.no-margin-top { margin-top:0px !important;	}
-.no-margin-bottom  { margin-bottom:0px !important; }
-.no-margin-right { margin-right:0px !important;	}
-.no-margin-left { margin-left:0px !important; }
-
-.no-padding-top { padding-top:0px !important;	}
-.no-padding-bottom  {padding-bottom:0px !important; }
-.no-padding-right { padding-right:0px !important;	}
-.no-padding-left { padding-left:0px !important; }
-
-.margin-top20 { margin-top:20px !important; }
-.margin-top30 { margin-top:30px !important; }
-.margin-top40 { margin-top:40px !important; }
-.margin-top60 { margin-top:40px !important; }
-
-.margin-bottom20 { margin-bottom:20px !important; }
-.margin-bottom30 { margin-bottom:30px !important; }
-.margin-bottom40 { margin-bottom:40px !important; }
-.margin-bottom60 { margin-bottom:60px !important; }
-
-.padding-top20 { padding-top:20px !important; }
-.padding-top30 { padding-top:30px !important; }
-.padding-top40 { padding-top:40px !important; }
-.padding-top60 { padding-top:40px !important; }
-
-.padding-bottom20 { padding-bottom:20px !important; }
-.padding-bottom30 { padding-bottom:30px !important; }
-.padding-bottom40 { padding-bottom:40px !important; }
-.padding-bottom60 { padding-bottom:60px !important; }*/
-
 .no-top { top:0 !important; }
 
 .aligncenter {
@@ -99,7 +52,7 @@ figure { margin:0px; }
 .textright { text-align:right }
 .textleft { text-align:left }
 
-section { margin: 40px 0px; }
+section { margin: 60px 0px; }
 section#navigation { margin: 0; }
 
 /* Links */
@@ -325,8 +278,6 @@ figure.figure-hover { position:relative; }
 }
 	.map img { max-width:none; }
 
-
-
 /* ========================= Header ========================= */
 
 #header {
@@ -399,60 +350,22 @@ figure.figure-hover { position:relative; }
 }
 
 /* Logo */
+#navigation .logo img { height:100%; }
 
-#navigation .logo {
-	/*margin:15px 0px;*/
-	/*float:left;*/
-	/*padding-left:25px;*/
+#navigation .navbar-collapse ul li {
+	list-style-type:none;	
 }
-	#navigation .logo img { height:100%; }
-	/* Navigation Menu */
-
-/*#navigation .navbar-collapse ul { float:right; }*/
-
-	#navigation .navbar-collapse ul li {
-		/*float:left;*/
-		list-style-type:none;	
-	}
-		#navigation .navbar-collapse ul li a {
-			/*float:left;*/
-			padding:23px 25px;
-			font-family:Ubuntu, Arial, sans-serif;
-			font-size:13px;
-			text-transform:uppercase;
-			line-height:14px;
-			color:#404040;
-		}
-		#navigation .navbar-collapse ul li.active a, #navigation .navbar-collapse ul li a.selected, #navigation .navbar-collapse ul li a:hover { color:#2baaea; }
-		
-		
-		
-/* Navigation Menu */
-/*
-#navigation .nav-menu ul { float:right; }
-#navigation .nav-menu select {
-	float:right;
-	margin-top:11px;
-	width:300px;
+#navigation .navbar-collapse ul li a {
+	padding:23px 25px;
+	font-family:Ubuntu, Arial, sans-serif;
+	font-size:13px;
+	text-transform:uppercase;
+	line-height:14px;
+	color:#404040;
 }
-	#navigation .nav-menu ul li {
-		float:left;
-		list-style-type:none;	
-	}
-		#navigation .nav-menu ul li a {
-			float:left;
-			padding:23px 25px;
-			font-family:Ubuntu, Arial, sans-serif;
-			font-size:13px;
-			text-transform:uppercase;
-			line-height:14px;
-			color:#404040;
-		}
-		#navigation .nav-menu ul li.active a, #navigation .nav-menu ul li a.selected, #navigation .nav-menu ul li a:hover { color:#2baaea; }
-		
-		
-		*/
-/* ========================= Services ========================= */
+#navigation .navbar-collapse ul li.active a, #navigation .navbar-collapse ul li a.selected, #navigation .navbar-collapse ul li a:hover { color:#2baaea; }
+
+/* ========================= What ========================= */
 
 	#what .item {
 		padding: 0 15px 30px;
@@ -471,9 +384,8 @@ figure.figure-hover { position:relative; }
 		#what .item i.fa-users{
 			color:#df9e20;
 		}
-		#what .item h4 {
-			font-size:20px;
-			line-height:26px;
+		#what .item h2 {
+			font-size:28px;
 		}
 		#what .item h5 {
 			font-size:13px;
@@ -485,58 +397,10 @@ figure.figure-hover { position:relative; }
 		
 		
 		
-/* ========================= Portofolio ========================= */
+/* ========================= Who ========================= */
 
-	#portofolio .flex-viewport { max-height:none; }
-	#portofolio .flexslider {
-		position:relative;
-		padding:25px 0px 20px;
-	}
-		#portofolio .flexslider .flex-control-paging li a {
-			width:60px;
-			height:8px;
-			-moz-border-radius:0px;
-			-webkit-border-radius:0px;
-			border-radius:0px;
-		}
-	#portofolio .item { padding-bottom:30px; }
 #who li i { color: #2baaea;}
-	
-	
-	
-/* ========================= About ========================= */
-
-#about { padding:60px 0px 50px; }
-#about .teams { padding-top:40px; }
-	#about .teams .item { padding-bottom:30px; }
-		#about .teams .item figure { position:relative; }
-			#about .teams .item figure p {
-				position:absolute;
-				top:0;
-				right:0;
-				background-color:#2baaea;
-				padding:8px 15px;
-				font-size:12px;
-				color:#FFF;
-				text-transform:uppercase;
-			}
-		#about .teams .item .name { margin-bottom:15px; }
-		#about .teams .item p { margin:0px; }
-			#about .teams .item .name h5 {
-				font-size:18px;
-				margin:15px 0px 5px;
-			}
-		#about .teams .item .social { margin-top:15px; }
-			#about .teams .item .social li {
-				list-style-type:none;
-				display:inline;
-				margin-right:12px;
-			}
-				#about .teams .item .social li a { color:#a9a9a9; }
-				#about .teams .item .social li a:hover { color:#404040; }
-				#about .teams .item .social li i { font-size:18px; }
-
-
+#who .col-sm-6 { padding-right: 0; }
 
 /* ========================= Contact ========================= */
 
@@ -586,14 +450,9 @@ figure.figure-hover { position:relative; }
 }
 	.testimonials .container, .tweets .container {
 		position:relative;
-		/*padding-left:125px;*/
 	}
 	.testimonials .testimonials-icon, .tweets .tweets-icon {
-		/*font-size:90px;*/
 		color:#60c2f3;
-		/*position:absolute;*/
-		/*top:0;*/
-		/*left:0;*/
 	}
 	.testimonials .flexslider, .tweets .flexslider { padding-top:15px; }
 	.testimonials p, .tweets p {
@@ -613,143 +472,6 @@ figure.figure-hover { position:relative; }
 		text-transform:lowercase;
 		text-shadow:#404040 1px 1px 1px;
 	}
-	
-
-	
-/* ========================= Blog ========================= */
-
-#blog { padding:20px 0px 40px; }
-	#blog .meta-desc {
-		border-top:1px solid #e0e0e0;
-		border-bottom:1px solid #e0e0e0;
-		padding:8px 0px;
-		font-size:12px;
-		color:#a9a9a9;
-		line-height:16px;
-		text-transform:uppercase;
-	}
-		#blog .meta-desc i { color:#5a5a5a; }
-		#blog .meta-desc .font-slight {
-			color:#e0e0e0;
-			font-size:16px;
-			padding:0px 5px;
-		}
-		#blog .meta-desc .read-more {
-			float:right;
-			margin-top:1px;
-		}
-	#blog .nav-page {
-		padding:30px 0px 50px;
-		font-size:14px;
-		font-family:Ubuntu, Arial, sans-serif;
-		text-align:center;
-	}
-		#blog .nav-page span { margin-right:10px; }
-		#blog .nav-page a {
-			color:#a9a9a9;
-			padding:8px 20px 10px;
-			background-color:#e9e9e9;
-		}
-		#blog .nav-page a.active, #blog .nav-page a:hover {
-			background-color:#2baaea;
-			color:#FFF;	
-		}
-
-/* Blog Posts */
-
-#blog .item { padding-bottom:40px; }
-	#blog .item figure {
-		position:relative;
-		overflow:hidden;
-	}
-		#blog .item figure a {
-			position:absolute;
-			bottom:0;
-			left:0;
-			color:#FFF;
-			background-color:#2baaea;
-			font-size:20px;
-			line-height:26px;
-			padding:10px 20px;
-		}
-		#blog .item figure a:hover { background-color:#404040; }
-	#blog .item p  { margin:15px 0px 20px; }
-	
-
-/* Single Blog */
-
-#blog.single-blog { padding-bottom:80px; }
-	#blog.single-blog .meta-desc { margin:30px 0px 15px; }
-	#blog.single-blog .post-tags {
-		color:#5a5a5a;
-		padding:20px 0px;
-		text-transform:uppercase;
-		font-size:13px;
-		line-height:18px;
-	}
-		#blog.single-blog .post-content ul { margin:0 0 10px 25px; }
-
-/* Single Blog */
-
-#blog.single-page { padding-bottom:80px; }
-
-/* Blog Comments */
-
-#blog #comments { padding-top:20px; }
-	#blog #comments .comment-lists { overflow:hidden; }
-		#blog #comments .comment-lists h4 { padding-bottom:25px; }
-		#blog #comments .comment-lists ul {
-			float:left;
-			width:100%;
-		}
-			#blog #comments .comment-lists ul li {
-				padding-bottom:40px;
-				list-style-type:none;
-				float:left;
-				width:100%;
-			}
-				#blog #comments .comment-lists ul li img {
-					float:left;
-					width:8%;
-					padding:2px;
-					border:1px solid #eaeaea;
-				}
-				#blog #comments .comment-lists ul li .content {
-					float:right;
-					width:90%;	
-				}
-					#blog #comments .comment-lists ul li .content h5 {
-						font-size:16px;
-						margin-bottom:5px;	
-					}
-					#blog #comments .comment-lists ul li .content .meta-comment {
-						text-transform:uppercase;
-						color:#a9a9a9;
-						font-size:12px;
-						margin-bottom:5px;	
-					}
-					#blog #comments .comment-lists ul li .content .btn-reply {
-						font-size:12px;
-						padding:8px 15px;
-						line-height:34px;
-					}
-						
-				#blog #comments .comment-lists ul li > ul { padding:40px 0px 0px 60px; }
-			
-	#blog #comments .comment-form { padding-top:20px; }
-		#blog #comments .comment-form form { margin:0px; }
-		#blog #comments .comment-form input[type="text"] {
-			display:block;
-			width:60%;
-			margin-bottom:20px;
-		}
-		#blog #comments .comment-form textarea {
-			width:100%;
-			margin-bottom:20px;
-		}
-		#blog #comments .comment-form textarea { height:180px; }
-
-
 
 /* ========================= Footer ========================= */
 
@@ -806,19 +528,13 @@ figure.figure-hover { position:relative; }
 /* ========================= Media Queries ========================= */
 
 @media (min-width: 980px) and (max-width: 1199px) {
-	
-	/*#navigation .logo { padding-left:20px; }*/
-	/*#navigation .nav-menu ul li a { padding:23px 20px; }*/
-	
+
 	.footer-social ul li { margin:0px 35px; }
 	
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-	
-	/*#navigation .logo { padding-left:15px; }*/
-	/*#navigation .nav-menu ul li a { padding:23px 15px; }*/
-	
+
 	.footer-social ul li { margin:0px 25px; }
 	h2 {
 		font-size:26px;
@@ -827,78 +543,15 @@ figure.figure-hover { position:relative; }
 }
 
 @media (max-width: 767px) {
-	
-	/*.responsive { display:block !important; }*/
-	
+
 	#header .container { padding:0px 20px; }
 	#header .container h1 {
 		font-size:42px;
 		line-height:48px;
 	}
 
-	/*.testimonials .container { padding-left: 30px; }*/
 	.testimonials .media-body p { font-size: 26px; line-height: 28px; }
-	
-	/*#navigation {
-		padding-left:10px;
-		padding-right:10px;
-	}
-	#navigation .logo { padding-left:0px; }*/
-	/*#navigation .nav-menu ul { display:none; }*/
-	/*
-	#what, #portofolio, #about, #start {
-		padding-left:20px;
-		padding-right:20px;
-	}
-	#what .item { text-align:center; }
-	#what .item img {
-		float:none;
-		width:64px;
-		height:64px;
-	}
-	#what .item .content {
-		float:none;
-		width:100%;
-		margin-top:25px;
-	}
-	
-	#start textarea { margin-top:20px; }
-	
-	#blog {
-		padding-left:20px;
-		padding-right:20px;	
-	}
-	#blog .meta-desc .read-more { display:none; }
-	#blog .nav-page {
-		padding-top:0px;
-		font-size:15px;
-		text-align:left;
-	}
-	#blog .nav-page span { margin-right:10px; }
-	#blog .nav-page a {
-		display:block;
-		width:100%;
-		margin-bottom:5px;
-	}
-	#blog .nav-page a:last-child { margin-bottom:0px; }
-	
-	#blog #comments .comment-lists ul li img { width:12%; }
-	#blog #comments .comment-lists ul li .content { width:85%; }
-	#blog #comments .comment-form input[type="text"] { width:100%; }
-	#blog #comments .comment-form .btn {
-		display:block;
-		width:100%;	
-	}
-	
-	.testimonials, .tweets {
-		padding:40px 0px;
-		text-align:center;
-	}
-	.testimonials .container, .tweets .container { padding:0px 20px; }
-	.testimonials .testimonials-icon, .tweets .tweets-icon { position:static; }
-	
-	.footer-social ul li { margin:0px 20px; }*/
-	
+
 }
 
 @media (max-width: 600px) {
@@ -907,9 +560,6 @@ figure.figure-hover { position:relative; }
 		font-size:38px;
 		line-height:44px;
 	}
-	
-	#blog #comments .comment-lists ul li img { width:13%; }
-	#blog #comments .comment-lists ul li .content { width:83%; }
 
 }
 
@@ -919,9 +569,6 @@ figure.figure-hover { position:relative; }
 		font-size:34px;
 		line-height:40px;
 	}
-	
-	#blog #comments .comment-lists ul li img { width:14%; }
-	#blog #comments .comment-lists ul li .content { width:81%; }
 	
 }
 
@@ -934,29 +581,7 @@ figure.figure-hover { position:relative; }
 		line-height:36px;
 	}
 
-	/*.testimonials .container { padding-left: 15px; }*/
-	.testimonials .media-body p { font-size: 20px; line-height: 22px; }
-	
-/*	#navigation {
-		padding-left:20px;
-		padding-right:20px;
-	}*/
-	/*#navigation.stickit, #navigation.stickit-end { position:absolute; }*/
-	/*#navigation .logo {
-		float:none;
-		text-align:center;
-		padding-left:0px;
-	}*/
-	/*#navigation .nav-menu select {
-		float:none;
-		margin-bottom:20px;
-		width:100%;
-	}*/
-	
-	#blog #comments .comment-lists ul li img { width:15%; }
-	#blog #comments .comment-lists ul li .content { width:80%; }
-	#blog #comments .comment-lists ul li > ul { padding-left:0px; }
-		
+	.testimonials .media-body p { font-size: 20px; line-height: 22px; }	
 }
 
 @media (max-width: 380px) {
@@ -966,9 +591,6 @@ figure.figure-hover { position:relative; }
 		line-height:32px;
 	}
 	
-	#blog #comments .comment-lists ul li img { width:20%; }
-	#blog #comments .comment-lists ul li .content { width:74%; }
-	
 }
 
 @media (max-width: 300px) {
@@ -977,17 +599,7 @@ figure.figure-hover { position:relative; }
 		font-size:22px;
 		line-height:28px;
 	}
-	
-	#blog #comments .comment-lists ul li img {
-		width:100%;
-		float:none;
-	}
-	#blog #comments .comment-lists ul li .content {
-		width:100%;
-		float:none;
-		margin-top:10px;
-	}
-	
+
 	.footer-social ul li {
 		display:block;
 		text-align:center;	
