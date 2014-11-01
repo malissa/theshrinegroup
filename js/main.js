@@ -27,7 +27,7 @@ jQuery(document).ready(function($){
 	
 	// Top fullscreen image with jQuery backstretch
 	// $.backstretch('images/woodward.jpg');
-	$.backstretch('images/bg.png');
+	$.backstretch('images/bg.jpg');
 	
 	// jQuery tooltips
 	$('.teams .social li a').tooltip();
