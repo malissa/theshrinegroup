@@ -403,6 +403,42 @@ figure.figure-hover { position:relative; }
 #who li i { color: #2baaea;}
 #who .col-sm-6 { padding-right: 0; }
 
+/* ========================= WHY ========================== */
+
+.balloon {
+	&.off {
+		background: none !important;
+		.text {
+			color: lightgray;
+		}
+	}
+	&.blue {
+		border: 1px solid lightblue;
+		background: lightblue;
+	}
+	&.sm {
+		display: inline-block;
+		border-radius: 75px;
+		width: 75px;
+		height: 75px;
+		text-align: center;
+		.text {
+			top: 20%;
+		}
+	}
+	&.md {
+
+	}
+	&.lg {
+
+	}
+	.text {
+		color: black;
+		position: relative;
+		line-height: 16px;
+	}
+}
+
 /* ========================= Contact ========================= */
 
 	#start form { margin:0px; }
