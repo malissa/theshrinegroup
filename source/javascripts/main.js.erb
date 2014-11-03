@@ -3,7 +3,7 @@ jQuery(window).load(function() {
 	
 	"use strict";
 	
-	jQuery('.page-loading').fadeOut(1000, function() {
+	jQuery('.page-loading').fadeOut(750, function() {
 		$(this).remove();	
 	});
 	
@@ -27,7 +27,9 @@ jQuery(document).ready(function($){
 	
 	// Top fullscreen image with jQuery backstretch
 	// $.backstretch('images/woodward.jpg');
-	$.backstretch('images/bg2.jpg');
+	var background_image = "<%= image_path('bg2.jpg') %>";
+
+	$.backstretch(background_image);
 	
 	// jQuery tooltips
 	$('.teams .social li a').tooltip();
