@@ -49,4 +49,12 @@ jQuery(document).ready(function($){
 	// jQuery placeholder for IE
 	$("input, textarea").placeholder();
 
+	$(".balloon-btn").click(function(event){
+		$(".balloon-btn").removeClass('active');
+		$(this).addClass('active');
+		var $label = $(this).data('label');
+		$(".balloon").addClass('off');
+		$(".balloon."+$label).removeClass('off');
+	});
+
 });

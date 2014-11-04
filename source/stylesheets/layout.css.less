@@ -405,32 +405,73 @@ figure.figure-hover { position:relative; }
 
 /* ========================= WHY ========================== */
 
+.what-title span {
+	padding-right: 10px;
+}
+.balloon-btn {
+	&.active {
+		font-style: italic;
+		color: #2baaea;
+	}
+	&:hover{
+		color: #2baaea;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
 .balloon {
+	display: inline-block;
+	text-align: center;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	border: 2px solid transparent;
+
 	&.off {
-		background: none !important;
+		border-color: lightgray !important;
 		.text {
 			color: lightgray;
 		}
 	}
+	&.red {
+		border-color: #f66e44;
+	}
 	&.blue {
-		border: 1px solid lightblue;
-		background: lightblue;
+		border-color: #2baaea;
+	}
+	&.green {
+		border-color: #4cbb1b;
+	}
+	&.orange {
+		border-color: #df9e20;
 	}
 	&.sm {
-		display: inline-block;
 		border-radius: 75px;
 		width: 75px;
 		height: 75px;
-		text-align: center;
 		.text {
-			top: 20%;
+			top: 25%;
 		}
 	}
 	&.md {
-
+		border-radius: 100px;
+		width: 115px;
+		height: 115px;
+		.text {
+			top: 40%;
+			font-size: 17px;
+			line-height: 17px;
+		}
 	}
 	&.lg {
-
+		border-radius: 125px;
+		width: 155px;
+		height: 155px;
+		.text {
+			top: 38%;
+			font-size: 18px;
+			line-height: 18px;
+		}
 	}
 	.text {
 		color: black;
@@ -612,6 +653,11 @@ figure.figure-hover { position:relative; }
 @media (max-width: 480px) {
 	
 	.sep-padding { height:160px; }
+
+	.xs-block {
+		display: block !important;
+		padding-bottom: 10px;
+	}
 	
 	#header .container h1 {
 		font-size:30px;
